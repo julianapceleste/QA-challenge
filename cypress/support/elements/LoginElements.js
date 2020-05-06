@@ -1,7 +1,8 @@
 class LoginElements {
-    botaoLogin = () => { return '.main-header-login-content .title' }
 
-    botaoRecuperarSenha = () => { return '.forgot' }
+    loginButton = () => { return '.login' }
+
+    submitButton = () => { return '#SubmitCreate'}
 }
 
 export default LoginElements;
