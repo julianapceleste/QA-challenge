@@ -1,8 +1,11 @@
 class LoginElements {
+    buttonLogin = () => { return '.login' }
 
-    loginButton = () => { return '.login' }
+    emailFild = () => { return '#email'}
 
-    submitButton = () => { return '#SubmitCreate'}
+    passwordFild = () => { return '#passwd'}
+
+    submitLogin = () => { return '#SubmitLogin > span' }
 }
 
 export default LoginElements;

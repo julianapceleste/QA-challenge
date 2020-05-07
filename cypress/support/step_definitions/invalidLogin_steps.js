@@ -4,7 +4,6 @@ import LoginPage from '../pageobjects/LoginPage'
 const loginPage = new LoginPage
 
 
-
     Given("that I'm on the home page", () => {
         loginPage.accessSite();
     });
@@ -17,11 +16,12 @@ const loginPage = new LoginPage
     loginPage.fillEmail();
     });
 
-    And('fill the fild "Password"', () => {
-    loginPage.fillPassword();
+    And('fill the fild "Password" with a wrong Password', () => {
+        cy.get('#passwd').click()
+        .type('12345678')
     });
 
     And('I will be able to log in', () => {
     loginPage.submitLogin()
-    cy.get('.page-heading').should('contain', 'My account')
+    cy.get('.alert.alert-danger').should('contain', 'Authentication failed.')
     });

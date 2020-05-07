@@ -1,26 +1,38 @@
 /// <reference types="Cypress" />
 
 import LoginElements from '../elements/LoginElements'
-const LoginElements1 = new LoginElements
+const loginElements = new LoginElements
 
-
-const url = Cypress.config("baseUrl")
+const url = Cypress.env("baseUrl")
 
 class LoginPage {
-    // Acessa o site que será testado
-    acessSite() {
+
+    accessSite() {
         cy.visit(url)
     }
 
-    // Clica no botão que acessa a página de login do site
-    clickLoginButton() {
-        cy.get(LoginElements1.loginButton()).click()
+    clickButtonSignIn() {
+        cy.get(loginElements.buttonLogin()).click()
+    }
+  
+    fillEmail() {
+        cy.get(loginElements.emailFild()).click()
+        .type('1515@gmail.com')
+    }
+
+    fillPassword() {
+        cy.get(loginElements.passwordFild()).click()
+        .type('12345')
     }
 
     submitLogin() {
-        cy.get(LoginElements.submitLogin()).click()
+        cy.get(loginElements.submitLogin()).click()
     }
-  
-}
+};
 
 export default LoginPage;
+
+
+
+
+

@@ -1,6 +1,8 @@
 {
-    "viewportWidth": 1024,
-    "viewportHeight": 768,
-    "defaultCommandTimeout": 10000,
-    "baseUrl": "http://automationpractice.com/index.php"
-}
+    "video": false,
+    "viewPortWidth": 1440,
+    "viewPortHeight": 900,
+    "ignoreTestFiles": "*js",
+    "numTestsKeptInMemory": 1
+  }
+  
