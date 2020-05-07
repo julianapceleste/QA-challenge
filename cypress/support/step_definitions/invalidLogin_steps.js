@@ -21,7 +21,7 @@ const loginPage = new LoginPage
         .type('12345678')
     });
 
-    And('I will be able to log in', () => {
+    And('clicking login an error message will be displayed', () => {
     loginPage.submitLogin()
     cy.get('.alert.alert-danger').should('contain', 'Authentication failed.')
     });
