@@ -4,5 +4,6 @@
     "viewPortHeight": 900,
     "ignoreTestFiles": "*js",
     "numTestsKeptInMemory": 1
+
   }
   

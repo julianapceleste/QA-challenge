@@ -2,7 +2,5 @@
 .DS_Store
 cypress/videos/
 cypress/screenshots/
-cypress.env.json
-.env
 .vscode
 node_modules
